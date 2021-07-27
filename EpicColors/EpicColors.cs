@@ -14,7 +14,7 @@ namespace EpicColors
     public class ColorsPlugin : BasePlugin
     {
         static internal ManualLogSource Logger;
-        public const string Id = "DevsUs.EpicColors";
+        public const string Id = "io.github.powerbox1000.aumod.epiccolors";
         public const string Version = "1.1.0";
 
         public Harmony Harmony { get; } = new Harmony(Id);
@@ -65,6 +65,8 @@ namespace EpicColors
             "name;Mummybrown main;143,75,40",
             "name;Quercitron main;229,176,61",
             "name;Cochineal main;159,35,45",
+            "name;Fortegreen main;29,152,83",
+            "name;SunBurn main;241,247,63 shadow;241,42,47",
             "", 
             // Special colors
             "name;Rainbow special;hue duration;5 main;100,100 shadow;100,65",
