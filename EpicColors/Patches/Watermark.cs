@@ -17,27 +17,5 @@ namespace EpicColors
 
             return name != ""? $"You are using <color=#{color}>{name}</color>": "";
         }
-
-        [HarmonyPatch(typeof(PingTracker), nameof(PingTracker.Update))]
-        private static class PingTrackerPatch
-        {
-            [HarmonyPostfix]
-            static void WatermarkPatch(PingTracker __instance) {
-                var t = __instance.text;
-                var pos = __instance.transform.localPosition;
-                var id = PlayerControl.LocalPlayer?.Data.ColorId;
-
-                if (!t.text.Contains("\n")) {
-                    __instance.transform.localPosition = new Vector3(pos.x, 2.8f, pos.z);
-                    t.alignment = TMPro.TextAlignmentOptions.TopGeoAligned;
-                }
-
-                if (AmongUsClient.Instance.GameState != InnerNet.InnerNetClient.GameStates.Started) {
-                    t.text += "\nEpicColors by Devs-Us <size=80%>v1.1</size>\n";
-                    t.text += id?.GetColorName();
-                    t.text += !RemoveVanillaColors ? (id >= OldMain.Count ? Author : "") : Author;
-                }
-            }
-        }
     }
 }
