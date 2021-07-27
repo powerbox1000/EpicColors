@@ -66,7 +66,7 @@ namespace EpicColors
             "name;Quercitron main;229,176,61",
             "name;Cochineal main;159,35,45",
             "name;Fortegreen main;29,152,83",
-            "name;SunBurn main;241,247,63 shadow;241,42,47",
+            "name;Sun Burn main;241,247,63 shadow;241,42,47",
             "", 
             // Special colors
             "name;Rainbow special;hue duration;5 main;100,100 shadow;100,65",
